@@ -79,19 +79,20 @@ export const preBuild: yargs.CommandModule = {
       const diff = await git.diff();
       if (diff)
         return console.log(logSymbols.error, chalk.red('当前有未提交的修改'));
-
+      shelljs.exec(`npm version ${nextVersion}`, { slient: true });
       await git.add('./*');
       await git.commit(`prebuild: v${nextVersion}`);
-      await git.tag(`v${nextVersion}`, `prebuild: v${nextVersion}`);
       await git.push('origin', 'main', {
         setUpstream: true,
       });
-      await git.push('origin', nextVersion, {
+      console.log(logSymbols.success, chalk.green('推送代码成功'));
+
+      await git.tag([`v${nextVersion}`]);
+      await git.push('origin', [`v${nextVersion}`], {
         setUpstream: true,
       });
-      shelljs.exec(`npm version ${nextVersion}`, { slient: true });
-      console.log(confirm);
-      console.log(nextVersion);
+      console.log(logSymbols.success, chalk.green('推送tag成功'));
+
     } catch (err) {
       console.log(chalk.bgRed('已取消reson:', err));
     }
