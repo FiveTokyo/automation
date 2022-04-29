@@ -82,15 +82,11 @@ export const preBuild: yargs.CommandModule = {
       shelljs.exec(`npm version ${nextVersion}`, { slient: true });
       await git.add('./*');
       await git.commit(`prebuild: v${nextVersion}`);
-      await git.push('origin', 'main', {
-        setUpstream: true,
-      });
+      await git.push('origin', 'main');
       console.log(logSymbols.success, chalk.green('推送代码成功'));
 
       await git.tag([`v${nextVersion}`]);
-      await git.push('origin', [`v${nextVersion}`], {
-        setUpstream: true,
-      });
+      await git.push('origin', [`v${nextVersion}`]);
       console.log(logSymbols.success, chalk.green('推送tag成功'));
 
     } catch (err) {
