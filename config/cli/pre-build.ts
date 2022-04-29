@@ -89,7 +89,7 @@ export const preBuild: yargs.CommandModule = {
             console.log(confirm)
             console.log(nextVersion)
         } catch (err) {
-            console.log(chalk.bgRed('已取消'))
+            console.log(chalk.bgRed('已取消reson:', err))
         }
     }
 }
