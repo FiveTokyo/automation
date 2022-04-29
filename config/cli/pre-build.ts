@@ -4,8 +4,9 @@ import chalk from 'chalk'
 import semver from 'semver'
 import packageJson from '../../package.json'
 import logSymbols from 'log-symbols';
-
-const simpleGit = require('simple-git/promise')
+const path = require('path')
+const fs = require('fs')
+const simpleGit = require('simple-git')
 
 type PreBuildEnv = 'dev' | 'beta' | 'release'
 type ReleaseType = 'prerelease' | 'prepatch' | 'preminor' | 'major'
@@ -21,7 +22,7 @@ export const preBuild: yargs.CommandModule = {
     handler: async () => {
         try {
             const curVersion = packageJson.version
-
+            const packagePath = path.join(__dirname, '.', '../../package.json')
             const { env, releaseType } = await prompt<EnvVersion>([
                 {
                     type: 'select',
@@ -76,6 +77,12 @@ export const preBuild: yargs.CommandModule = {
             if(!confirm) return console.log(chalk.red('取消打包'))
             if(!semver.valid(nextVersion)) return console.log(logSymbols.error,chalk.red('版本号格式错误'))
             packageJson.version = nextVersion as string
+            let packageJSON = JSON.stringify(packageJson, null, 4)
+            fs.writeFile(packagePath, packageJSON, 'utf8', (err: { message: string }) => {
+                if (err) {
+                    throw new Error(err.message)
+                }
+            })
             const git = simpleGit();
             await git.add('./*')
             await git.commit(`prebuild: v${nextVersion}`)
