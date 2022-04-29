@@ -68,18 +68,18 @@ export const preBuild: yargs.CommandModule = {
             ])
 
             const nextVersion = semver.inc(curVersion, releaseType, env)
-            console.log('env:' + env)
             const { confirm } = await prompt<{ confirm?: boolean }>({
                 type: 'confirm',
                 name: 'confirm',
-                message: `当前版本: ${curVersion}, 请确定打包版本: ${nextVersion}`
+                message: `当前版本: v${curVersion}, 请确定打包版本: v${nextVersion}`
             })
             if(!confirm) return console.log(chalk.red('取消打包'))
             if(!semver.valid(nextVersion)) return console.log(logSymbols.error,chalk.red('版本号格式错误'))
+            packageJson.version = nextVersion as string
             const git = simpleGit();
             await git.add('./*')
-            await git.commit(`prebuild: ${nextVersion}`)
-            await git.tag(nextVersion, `prebuild: ${nextVersion}`)
+            await git.commit(`prebuild: v${nextVersion}`)
+            await git.tag(`v${nextVersion}`, `prebuild: v${nextVersion}`)
             await git.push('origin', env, {
                 setUpstream: true
             })
