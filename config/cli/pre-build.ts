@@ -21,6 +21,10 @@ export const preBuild: yargs.CommandModule = {
   handler: async () => {
     try {
       const curVersion = packageJson.version;
+      const git = simpleGit();
+      const diff = await git.diff();
+      if (diff)
+        return console.log(logSymbols.error, chalk.red('当前有未提交的修改'));
       const { env, releaseType } = await prompt<EnvVersion>([
         {
           type: 'select',
@@ -65,7 +69,7 @@ export const preBuild: yargs.CommandModule = {
           ],
         },
       ]);
-
+    
       const nextVersion = semver.inc(curVersion, releaseType, env);
       const { confirm } = await prompt<{ confirm?: boolean }>({
         type: 'confirm',
@@ -75,18 +79,17 @@ export const preBuild: yargs.CommandModule = {
       if (!confirm) return console.log(chalk.red('取消打包'));
       if (!semver.valid(nextVersion))
         return console.log(logSymbols.error, chalk.red('版本号格式错误'));
-      const git = simpleGit();
-      const diff = await git.diff();
-      if (diff)
-        return console.log(logSymbols.error, chalk.red('当前有未提交的修改'));
+    
+      
       shelljs.exec(`npm version ${nextVersion}`, { slient: true });
       await git.add('./*');
       await git.commit(`prebuild: v${nextVersion}`);
       await git.push('origin', 'main');
       console.log(logSymbols.success, chalk.green('推送代码成功'));
-
-      await git.tag([`v${nextVersion}`]);
-      await git.push('origin', [`v${nextVersion}`]);
+      const isExist = await git.show(`v${nextVersion}`);
+      console.log('isExist', isExist);
+      if(!isExist) await git.tag([`v${nextVersion}`]);
+      await git.push(['origin', `v${nextVersion}`]);
       console.log(logSymbols.success, chalk.green('推送tag成功'));
 
     } catch (err) {
