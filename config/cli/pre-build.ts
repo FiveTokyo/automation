@@ -69,7 +69,7 @@ export const preBuild: yargs.CommandModule = {
           ],
         },
       ]);
-    
+      console.log('env', env);
       const nextVersion = semver.inc(curVersion, releaseType, env);
       const { confirm } = await prompt<{ confirm?: boolean }>({
         type: 'confirm',
@@ -79,8 +79,7 @@ export const preBuild: yargs.CommandModule = {
       if (!confirm) return console.log(chalk.red('取消打包'));
       if (!semver.valid(nextVersion))
         return console.log(logSymbols.error, chalk.red('版本号格式错误'));
-    
-      
+
       shelljs.exec(`npm version ${nextVersion}`, { slient: true });
       await git.add('./*');
       await git.commit(`prebuild: v${nextVersion}`);
@@ -88,10 +87,9 @@ export const preBuild: yargs.CommandModule = {
       console.log(logSymbols.success, chalk.green('推送代码成功'));
       const isExist = await git.show(`v${nextVersion}`);
       console.log('isExist', isExist);
-      if(!isExist) await git.tag([`v${nextVersion}`]);
+      if (!isExist) await git.tag([`v${nextVersion}`]);
       await git.push(['origin', `v${nextVersion}`]);
       console.log(logSymbols.success, chalk.green('推送tag成功'));
-
     } catch (err) {
       console.log(chalk.bgRed('已取消reson:', err));
     }
