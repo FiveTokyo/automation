@@ -1,0 +1,10 @@
+/**
+ * ${rawModuleName}
+ * @author ${author}
+ * @date ${datetime}
+ * @since ${pkg.version}
+ */
+
+export const ${rawModuleName} = () => {
+    return {}
+}

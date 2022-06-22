@@ -1,0 +1,12 @@
+/**
+ * ${dirName}Config
+ * @author ${ref.author}
+ * @date ${datetime}
+ * @since ${pkg.version}
+ */
+ 
+import { Config } from '@tarojs/taro'
+
+const config: Config = {}
+
+export default config

@@ -1,0 +1,20 @@
+/**
+ * ${ModuleName}
+ * @author ${ref.author}
+ * @date ${datetime}
+ * @since ${pkg.version}
+ */
+
+import React from 'react'
+import { View } from '@tarojs/components'
+// import classnames from 'classnames'
+// import styles from './index.module.scss'
+
+export interface ${dirName}Props {}
+
+function ${dirName}(_props: ${dirName}Props) {
+    return <View>${dirName}</View>
+}
+
+export default React.memo(${dirName})
+

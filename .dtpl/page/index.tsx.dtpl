@@ -1,0 +1,26 @@
+/**
+ * ${ref.DirName}Page
+ * @author ${ref.author}
+ * @date ${datetime}
+ * @since ${pkg.version}
+ */
+
+import { MutableRefObject } from 'react'
+import { View } from '@tarojs/components'
+import Theme from '@/components/Theme'
+// import classnames from 'classnames'
+// import styles from './index.module.scss'
+
+export interface PageRef {}
+
+export interface PageProps {}
+
+function ${ref.DirName}Page(_props: PageProps, _ref: MutableRefObject<PageRef>) {
+    return (
+        <Theme>
+            <View>${ref.DirName}</View>
+        </Theme>
+    )
+}
+
+export default ${ref.DirName}Page

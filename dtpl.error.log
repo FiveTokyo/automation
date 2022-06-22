@@ -1,0 +1,112 @@
+Error: 执行命令 CreateDirectoriesCommand 出错: Cannot find module 'git-user-name'
+Require stack:
+- /Users/tokyo/development/Study_File/study_react18/.dtpl/dtpl.js
+- /Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/common/helper.js
+- /Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/core/common.js
+- /Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/index.js
+- /Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/out/app/App.js
+- /Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/out/app/index.js
+- /Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/out/vscode.js
+- /Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/loader.js
+- /Applications/Visual Studio Code.app/Contents/Resources/app/out/bootstrap-amd.js
+- /Applications/Visual Studio Code.app/Contents/Resources/app/out/bootstrap-fork.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:987:15)
+    at Module._load (node:internal/modules/cjs/loader:832:27)
+    at Function.c._load (node:electron/js2c/asar_bundle:5:13331)
+    at Function.i._load (/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:104:32156)
+    at Function.E._load (/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:104:28749)
+    at Function.g._load (/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:99:61429)
+    at Module.require (node:internal/modules/cjs/loader:1059:19)
+    at h (/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/loader.js:4:699)
+    at Object.<anonymous> (/Users/tokyo/development/Study_File/study_react18/.dtpl/dtpl.js:2:12)
+    at Module.u._compile (/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/loader.js:4:1313)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1216:10)
+    at Module.load (node:internal/modules/cjs/loader:1035:32)
+    at Module._load (node:internal/modules/cjs/loader:876:12)
+    at Function.c._load (node:electron/js2c/asar_bundle:5:13331)
+    at Function.i._load (/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:104:32156)
+    at Function.E._load (/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:104:28749)
+    at Function.g._load (/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:99:61429)
+    at Module.require (node:internal/modules/cjs/loader:1059:19)
+    at h (/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/loader.js:4:699)
+    at Object.requireFile (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/common/helper.js:116:12)
+    at Source.loadDtplConfig (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/core/file/Source.js:142:28)
+    at Source.match (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/core/file/Source.js:55:35)
+    at CreateDirectoriesCommand.<anonymous> (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/core/commands/CreateDirectoriesCommand.js:45:80)
+    at step (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:133:27)
+    at Object.next (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:114:57)
+    at /Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:107:75
+    at new Promise (<anonymous>)
+    at Object.__awaiter (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:103:16)
+    at /Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/core/commands/CreateDirectoriesCommand.js:36:110
+    at Object.<anonymous> (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/common/helper.js:44:58)
+    at step (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:133:27)
+    at Object.next (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:114:57)
+    at /Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:107:75
+    at new Promise (<anonymous>)
+    at Object.__awaiter (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:103:16)
+    at /Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/common/helper.js:42:53
+    at Object.<anonymous> (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/common/helper.js:49:42)
+    at step (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:133:27)
+    at Object.next (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:114:57)
+    at /Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:107:75
+    at new Promise (<anonymous>)
+    at Object.__awaiter (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:103:16)
+    at Object.series (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/common/helper.js:18:20)
+    at CreateDirectoriesCommand.<anonymous> (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/core/commands/CreateDirectoriesCommand.js:36:55)
+    at step (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:133:27)
+    at Object.next (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:114:57)
+    at /Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:107:75
+    at new Promise (<anonymous>)
+    at Object.__awaiter (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:103:16)
+    at CreateDirectoriesCommand.execute (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/core/commands/CreateDirectoriesCommand.js:28:24)
+    at CreateDirectoriesCommand.<anonymous> (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/core/commands/Command.js:190:51)
+    at step (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:133:27)
+    at Object.next (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:114:57)
+    at /Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:107:75
+    at new Promise (<anonymous>)
+    at Object.__awaiter (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:103:16)
+    at CreateDirectoriesCommand.Command.run (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/core/commands/Command.js:179:24)
+    at Commander.<anonymous> (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/core/Commander.js:43:54)
+    at step (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:133:27)
+    at Object.next (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:114:57)
+    at /Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:107:75
+    at new Promise (<anonymous>)
+    at Object.__awaiter (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:103:16)
+    at Commander.runCommand (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/core/Commander.js:24:24)
+    at Commander.<anonymous> (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/core/Commander.js:99:51)
+    at step (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:133:27)
+    at Object.next (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:114:57)
+    at /Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:107:75
+    at new Promise (<anonymous>)
+    at Object.__awaiter (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:103:16)
+    at Commander.add (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/core/Commander.js:92:24)
+    at /Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/core/Commander.js:144:76
+    at Commander.<anonymous> (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/core/Commander.js:129:46)
+    at step (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:133:27)
+    at Object.next (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:114:57)
+    at /Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:107:75
+    at new Promise (<anonymous>)
+    at Object.__awaiter (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:103:16)
+    at Commander.wrap (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/core/Commander.js:123:24)
+    at Commander.<anonymous> (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/core/Commander.js:144:44)
+    at step (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:133:27)
+    at Object.next (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:114:57)
+    at /Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:107:75
+    at new Promise (<anonymous>)
+    at Object.__awaiter (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:103:16)
+    at Commander.addCreateDirectoriesCommand (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/core/Commander.js:141:24)
+    at Application.<anonymous> (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/core/Application.js:30:65)
+    at step (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:133:27)
+    at Object.next (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:114:57)
+    at /Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:107:75
+    at new Promise (<anonymous>)
+    at Object.__awaiter (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:103:16)
+    at Application.createDirectories (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/core/Application.js:25:28)
+    at Application.<anonymous> (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/core/Application.js:118:51)
+    at step (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:133:27)
+    at Object.next (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:114:57)
+    at /Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:107:75
+    at new Promise (<anonymous>)
+    at Object.__awaiter (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/node_modules/tslib/tslib.js:103:16)
+    at run (/Users/tokyo/.vscode/extensions/qiu8310.dot-template-vscode-0.3.0/node_modules/dot-template-core/out/core/Application.js:84:48)
