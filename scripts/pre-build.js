@@ -16,7 +16,7 @@ preBuild({
     },
     {
       name: 'dev',
-      identifier: '',
+      identifier: 'dev-',
       releaseBranch: 'dev',
     },
   ],
