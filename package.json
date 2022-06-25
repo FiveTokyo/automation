@@ -1,6 +1,7 @@
 {
     "name": "study_react18",
     "version": "0.1.1-dev.4",
+    "main": "./dist/index.js",
     "private": true,
     "dependencies": {
         "@reduxjs/toolkit": "^1.8.2",
@@ -51,6 +52,8 @@
         "@types/yargs": "^17.0.10",
         "enquirer": "^2.3.6",
         "fs": "^0.0.1-security",
+        "git-user-name": "^2.0.0",
+        "project-build-ci": "^1.0.1",
         "semver": "^7.3.7",
         "shelljs": "^0.8.5",
         "simple-git": "^3.7.1",

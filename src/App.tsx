@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
+import Test from './page/test';
+
 import './App.css';
 
 function App() {
@@ -18,8 +20,9 @@ function App() {
     setSecond(second + 1);
   };
 
+  //比较下react18的批量处理
   const changeNumber = async () => {
-     await setfirst(first + 1);
+    await setfirst(first + 1);
     // console.log('1:')
     // await fn();
     // console.log('4:')
@@ -28,37 +31,35 @@ function App() {
     // //   // await fn();
     // //   setSecond(second + 1);
     // // }, 1000);
-     setfirst((n)=> n+ 1);
+    setfirst((n) => n + 1);
     // // // await fn();
     //  setSecond((n)=> n + 1);
   };
 
   const heihei = async () => {
     setfirst(first + 1);
-     new Promise((resolve, reject) => {
+    new Promise((resolve, reject) => {
       setfirst(first + 1);
       // new Promise((res, rej) => {
-        
+
       //   // console.log('first1:', first)
       //   // console.log('second1:', second)
       //    setSecond((n) => n + 1);
-        
+
       //   res('')
       // }).then((res) => {
       //   // console.log('first2:', first)
       //   // console.log('second2:', second)
       //    setSecond((n) => n + 1);
-        
-        resolve('heihei');
+
+      resolve('heihei');
       // });
-      
     }).then((res) => {
       // console.log('first3:', first)
       // console.log('second3:', second)
       setfirst((n) => n + 1);
       // // await fn();
       setSecond(second + 1);
-      
     });
   };
 
@@ -66,6 +67,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header" onClick={heihei}>
+        <Test></Test>
         {first}
         {second}
       </header>

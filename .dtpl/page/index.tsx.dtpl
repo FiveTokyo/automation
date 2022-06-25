@@ -5,9 +5,7 @@
  * @since ${pkg.version}
  */
 
-import { MutableRefObject } from 'react'
-import { View } from '@tarojs/components'
-import Theme from '@/components/Theme'
+import { MutableRefObject, FC } from 'react'
 // import classnames from 'classnames'
 // import styles from './index.module.scss'
 
@@ -15,11 +13,11 @@ export interface PageRef {}
 
 export interface PageProps {}
 
-function ${ref.DirName}Page(_props: PageProps, _ref: MutableRefObject<PageRef>) {
+function ${ref.DirName}Page(_props: PageProps, _ref: MutableRefObject<PageRef>): FC {
     return (
-        <Theme>
-            <View>${ref.DirName}</View>
-        </Theme>
+        <div classnames={styles.box}>
+            <div>${ref.DirName}</div>
+        </div>
     )
 }
 

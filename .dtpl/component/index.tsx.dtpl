@@ -6,15 +6,14 @@
  */
 
 import React from 'react'
-import { View } from '@tarojs/components'
 // import classnames from 'classnames'
 // import styles from './index.module.scss'
 
-export interface ${dirName}Props {}
+export interface ${DirName}Props {}
 
-function ${dirName}(_props: ${dirName}Props) {
-    return <View>${dirName}</View>
+function ${DirName}(_props: ${DirName}Props) {
+    return <div>${DirName}</div>
 }
 
-export default React.memo(${dirName})
+export default React.memo(${DirName})
 
