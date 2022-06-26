@@ -13,6 +13,7 @@ preBuild({
       name: 'prd',
       identifier: '',
       releaseBranch: 'release',
+      isNpm: true
     },
     {
       name: 'dev',
