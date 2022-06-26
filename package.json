@@ -2,7 +2,6 @@
     "name": "study_react18",
     "version": "0.1.2",
     "main": "./dist/index.js",
-    "private": true,
     "dependencies": {
         "@reduxjs/toolkit": "^1.8.2",
         "@testing-library/jest-dom": "^5.16.4",
