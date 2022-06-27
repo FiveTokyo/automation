@@ -1,7 +1,8 @@
-const path = require('path');
-const { preBuild } = require('project-build-ci');
+import { projectBuild, configOptions } from "project-build-ci";
 
-preBuild({
+const path = require('path');
+
+projectBuild({
   apps: {
     label: 'swagger-build',
     name: 'swagger-build',
@@ -13,7 +14,6 @@ preBuild({
       name: 'prd',
       identifier: '',
       releaseBranch: 'release',
-      isNpm: true
     },
     {
       name: 'dev',

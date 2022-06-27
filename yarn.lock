@@ -7148,10 +7148,10 @@ process-nextick-args@~2.0.0:
   resolved "https://npm.yzops.net/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
   integrity sha1-eCDZsWEgzFXKmud5JoCufbptf+I=
 
-project-build-ci@^1.0.10:
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/project-build-ci/-/project-build-ci-1.0.10.tgz#69d106a893b24824cc2a287868432fb5f71c2ba2"
-  integrity sha512-Igw4J3luXObRTP1G1+8tyv8ooS+Oi6PMMeGbGXGeexJBVoUMFcEaufOzrn+GVIprorgHG7J2SgT10NNb3V/EMg==
+project-build-ci@^1.0.12:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/project-build-ci/-/project-build-ci-1.0.12.tgz#cb64b58e9f6f89110225688c86e56f2c56b523e9"
+  integrity sha512-46QuePhShBvSE8KFFxks1dFFIUanBIxDQ90Ng0PLlSb1zsAXaizvf1UHQvXS80BMB+D73VqW80JKA3fbhZr6tw==
   dependencies:
     axios "^0.27.2"
     chalk "^4.1.1"
